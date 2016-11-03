@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="public/plugins/font-awesome/css/font-awesome.min.css">
+  		<link rel="stylesheet" href="public/plugins/foundation/foundation.css" />
+  		<link rel="stylesheet" href="public/plugins/foundation/normalize.css" />
+  		<link rel=stylesheet href="public/styles/common.css">
+
+		<script src="public/plugins/jquery/jquery.js"></script>
+		<script src="public/plugins/jscolor/jscolor.min.js"></script>
+
+	</head>
+	<body class="home">
+		<div class="body-wrapper">
+
+			<!-- Content Section -->
+			<div class="content-section">
+				<div class="content-wrapper">
+
+
+					<div class="content row">
+						<div class="one-column small-12 columns">
+							<h3 class="title">Parent</h3>
+						</div>
+						<div class="one-column small-12 columns">
+							<div class="main row" id="mainContent">
+								This is the parent. Send a message from the Iframe to see it updated here.
+							</div>
+						</div>
+
+						<div class="one-column small-12 columns">
+							<form class="row">
+								<label>Message to Send:</label>
+								<input id="sendText" />
+								<label>Method to call on Iframe:</label>
+								<select id="method">
+									<option value="set" selected>Change Text</option>
+									<option value="log">Log to Console</option>
+									<option value="alert">Alert</option>
+								</select>
+								<button id="parent-btn">
+									Send Message
+								</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="content row">
+						<div class="one-column small-12 columns">
+							<div class="main row">
+								<iframe id="iframe" src="http://localhost:8080/iframe" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<script src="public/js/parent.js"></script>
+		<script src="public/js/actions.js"></script>
+
+	</body>
+</html>
+
